@@ -1,0 +1,29 @@
+{
+  "name": "UMI-Robocasa",
+  "image": "robo-env:latest",
+  "runArgs": ["--gpus", "all", "--net=host"],
+  "workspaceFolder": "/workspace/",
+	"workspaceMount": "source=${localWorkspaceFolder}/workspace/,target=/workspace/,type=bind,consistency=delegated",
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=consistent",
+    "source=/dev/shm/,target=/dev/shm/,type=bind,consistency=consistent"
+  ],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "ms-vscode.cpptools",
+    "github.copilot",
+    "github.copilot-chat"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "/usr/bin/python3"
+  },
+  "remoteUser": "root",
+  "postStartCommand": "pip install -e /workspace/robosuite && pip install -e /workspace/robocasa && pip install -e /workspace/mimicgen && pip install -e /workspace/robomimic"
+}
