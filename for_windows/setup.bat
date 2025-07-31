@@ -7,7 +7,6 @@ if errorlevel 1 (
     exit /b 1
 )
 
-mkdir workspace
 cd workspace || exit /b
 
 git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robosuite.git

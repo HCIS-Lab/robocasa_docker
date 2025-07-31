@@ -33,7 +33,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel && \
     "qpsolvers[quadprog]>=4.3.1" \
     matplotlib gdown chardet huggingface_hub psutil \
     tensorboard tensorboardX transformers tianshou==0.4.10 \
-    diffusers==0.11.1
+    diffusers==0.11.1 mplib==0.2.1
 
 ###############################################################################
 # 3. Pytorch and torchvision with CUDA 12.6

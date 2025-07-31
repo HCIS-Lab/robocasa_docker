@@ -7,7 +7,6 @@ fi
 
 set -e
 
-mkdir workspace
 cd workspace
 git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robosuite.git
 git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robocasa.git
