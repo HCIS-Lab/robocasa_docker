@@ -10,12 +10,12 @@ set -e
 cd workspace
 git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robosuite.git
 git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robocasa.git
+git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-robomimic.git
+git clone --depth 1 https://github.com/HCIS-Lab/robocasa_project-mimicgen.git
 mv robocasa_project-robosuite robosuite
 mv robocasa_project-robocasa robocasa
-
-git clone --depth 1 https://github.com/NVlabs/mimicgen -b experimental/robocasa
-git clone --depth 1 https://github.com/ARISE-Initiative/robomimic -b robocasa
-sed -i 's/==/>=/g' robomimic/setup.py
+mv robocasa_project-robomimic robomimic
+mv robocasa_project-mimicgen mimicgen
 
 cd ..
 docker build -t robo-env:latest .
