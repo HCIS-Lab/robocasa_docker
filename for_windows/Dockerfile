@@ -31,7 +31,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel && \
     termcolor imageio imageio-ffmpeg h5py lxml hidapi \
     tianshou==0.4.10 pytest mink==0.0.5 \
     "qpsolvers[quadprog]>=4.3.1" \
-    matplotlib gdown chardet huggingface_hub psutil \
+    matplotlib gdown chardet huggingface_hub==0.25.1 psutil \
     tensorboard tensorboardX transformers tianshou==0.4.10 \
     diffusers==0.11.1 mplib==0.2.1
 
